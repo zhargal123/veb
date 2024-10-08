@@ -1,0 +1,190 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333; /* Темный фон для навигации */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Легкая тень */
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffd700; /* Цвет при наведении */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 15pt 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.starting-lineup {
+    background-color: #ffd700; /* Золотистый фон */
+}
+
+.bench {
+    background-color: #ff6347; /* Красный фон для скамейки */
+}
+
+.bench .player {
+    border: 2px solid #000; /* Черная рамка вокруг запасных игроков */
+    background-color: #000; /* Черный фон для запасных игроков */
+    color: #fff; /* Белый текст для контраста */
+    padding: 15px; /* Отступы внутри рамки */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Легкая белая тень для эффекта глубины */
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px; 
+}
+
+h3 {
+    font-size: 22px; 
+}
+
+.player-list {
+    display: flex; 
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+}
+
+.player {
+    display: inline-block; /* Изменяем на inline-block для обтягивания содержимого */
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 15px;
+    margin-right: 10px; /* Отступ между игроками */
+    border: 2px solid #333; /* Рамка вокруг каждого игрока */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 10px; /* Отступ внутри рамки */
+    background-color: #710986; /* Фон для игроков */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень для эффекта глубины */
+    text-align: center; /* Центрирование текста внутри рамки */
+}
+
+.player img {
+    width: 150px; /* Фиксированная ширина */
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover; /* Сохранение пропорций изображения с обрезкой */
+}
+
+.player h4 {
+   font-size :18px; 
+   margin-top :10px; 
+   color :white; 
+   text-align :center; 
+   transition: transform 0.3s; /* Плавный переход при наведении на текст */
+}
+
+.player:hover h4 {
+   transform: scale(1.05); /* Увеличение текста при наведении */
+}
+
+.player-stats {
+   margin-left :20px;  
+   font-size :16px;  
+   color :white;  
+   text-align :center; 
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+
+@media (max-width :768px) {
+
+   h1 {
+        font-size :24px;  
+   }
+
+   h3 {
+        font-size :20px;  
+   }
+
+   .player {
+        flex-basis: calc(50% - 20px); /* Две колонки на планшетах */
+   }
+}
+
+.contact-info {
+    background: linear-gradient(135deg, #ffcc00, #ff9900); /* Градиентный фон */
+    color: black; /* Черный текст */
+    text-align: center; /* Центрирование текста */
+    padding: 20px; /* Увеличенные отступы внутри блока */
+    margin-top: 20px; /* Отступ сверху для отделения от других элементов */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Легкая тень для эффекта глубины */
+}
+
+.contact-info h4 {
+    font-size: 22px; /* Увеличенный размер шрифта для заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+    font-family: 'Roboto', sans-serif; /* Используем тот же шрифт */
+}
+
+.contact-info p {
+    font-size: 18px; /* Размер шрифта для текста */
+    margin: 5px 0; /* Отступы сверху и снизу */
+    font-family: 'Roboto', sans-serif; /* Используем тот же шрифт */
+}
+
+@media (max-width :480px) {
+
+   nav a {
+        display:block;  
+        margin-bottom :5px;  
+        font-size :16px;  
+   }
+
+   main {
+        padding :10px;  
+   }
+
+   section {
+        padding :15px;  
+        margin-bottom :10pt;  
+        font-size :14px;  
+   }
+
+   .player {
+       flex-basis: calc(100% - 20px); /* Одна колонка на мобильных устройствах */
+   }
+}
+
+/* Стили для печати */
+@media print {
+   body {
+       background-color: white;
+       color: black;
+   }
+
+   nav, .player img {
+       display: none; /* Скрыть навигацию и изображения при печати */
+   }
+
+   .player-stats {
+       font-size: 12pt; /* Уменьшить размер шрифта для печати */
+       margin-left: 0; /* Убрать отступ слева */
+       text-align:left; /* Выравнивание текста по левому краю */
+   }
+}
