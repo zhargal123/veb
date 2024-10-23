@@ -44,53 +44,28 @@ section {
     background-color: #ff6347;
 }
 
-.bench .player {
-    border: 2px solid #000;
-    background-color: #000;
-    color: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
-
-h1, h3 {
-    text-align: center;
-}
-
-h1 {
-    font-size: 28px; 
-}
-
-h3 {
-    font-size: 22px; 
-}
-
 .player-list {
     display: flex; 
     flex-wrap: wrap; 
 }
 
 .player {
-    display: inline-block; 
+    display: flex; 
     flex-direction: column; 
     align-items: center; 
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
     margin-right: 10px; 
-    border: 2px solid #333; 
     border-radius: 10px; 
     padding: 10px; 
     background-color: #710986; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    text-align: center; 
 }
 
 .player img {
     width: 150px; 
-    height: 200px; 
-    object-fit: cover; 
+    height: auto; 
 }
 
-.player h4 {
+.player h3 {
    font-size :18px; 
    margin-top :10px; 
    color :white; 
@@ -98,29 +73,16 @@ h3 {
    transition: transform 0.3s; 
 }
 
-.player:hover h4 {
+.player:hover h3 {
    transform: scale(1.05); 
 }
 
 .player-stats {
-   margin-left :20px;  
+   width: auto;  
    font-size :16px;  
    color :white;  
-   text-align :center; 
-}
-
-@media (max-width :768px) {
-   h1 {
-        font-size :24px;  
-   }
-
-   h3 {
-        font-size :20px;  
-   }
-
-   .player {
-        flex-basis: calc(50% - 20px); 
-   }
+   text-align :left; 
+   margin-top :10px;  
 }
 
 .contact-info {
@@ -129,20 +91,32 @@ h3 {
     text-align: center; 
     padding: 20px; 
     margin-top: 20px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
-.contact-info h4 {
-    font-size: 22px; 
-    margin-bottom: 10px; 
-    font-family: 'Roboto', sans-serif; 
+.contact-img {
+   width: 100px; 
+   height: auto; 
+   border-radius: 5px;  
+   margin-bottom: 10px;  
 }
 
-.contact-info p {
-    font-size: 18px; 
-    margin: 5px 0; 
-    font-family: 'Roboto', sans-serif; 
+.contact-link {
+   color: black; 
+   text-decoration: underline;
+}
+
+@media (max-width :768px) {
+   h1 {
+        font-size :24px;  
+   }
+
+   h2 {
+        font-size :20px;  
+   }
+
+   .player {
+        flex-basis: calc(50% - 20px); 
+   }
 }
 
 @media (max-width :480px) {
@@ -164,22 +138,7 @@ h3 {
 
    .player {
        flex-basis: calc(100% - 20px); 
-   }
-}
-
-@media print {
-   body {
-       background-color: white;
-       color: black;
-   }
-
-   nav, .player img {
-       display: none; 
-   }
-
-   .player-stats {
-       font-size: 12pt; 
-       margin-left: 0; 
-       text-align:left; 
+       max-width: calc(50% - 20px); /* Установите максимальную ширину для адаптивности */
+       box-sizing: border-box;
    }
 }
