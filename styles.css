@@ -85,9 +85,10 @@ h3 {
 }
 
 .player img {
-    width: 150px; /* Установите нужную ширину */
-    height: 200px; /* Установите нужную высоту */
-    object-fit: cover; /* Обрезка изображения для сохранения пропорций */
+    width: 150px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px; 
 }
 
 .player h4 {
@@ -120,6 +121,11 @@ h3 {
 
    .player {
         flex-basis: calc(50% - 20px); 
+   }
+
+   .player img {
+       width: 120px; 
+       height: auto; 
    }
 }
 
@@ -165,6 +171,13 @@ h3 {
    .player {
        flex-basis: calc(100% - 20px); 
    }
+
+   .player img {
+       width: auto; 
+       height:auto;  
+       max-width:100%;  
+       max-height:auto;  
+   }
 }
 
 @media print {
@@ -174,12 +187,12 @@ h3 {
    }
 
    nav, .player img {
-       display: none; 
+       display:none ; 
    }
 
    .player-stats {
-       font-size: 12pt; 
-       margin-left: 0; 
-       text-align:left; 
+       font-size:12pt ; 
+       margin-left :0 ; 
+       text-align:left ; 
    }
 }
