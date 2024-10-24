@@ -86,7 +86,7 @@ h3 {
 
 .player img {
     width: 150px; 
-    height: auto; /* Автоматическая высота */
+    height: 200px; 
     object-fit: cover; 
 }
 
@@ -136,11 +136,13 @@ h3 {
 .contact-info h4 {
     font-size: 22px; 
     margin-bottom: 10px; 
+    font-family: 'Roboto', sans-serif; 
 }
 
 .contact-info p {
     font-size: 18px; 
     margin: 5px 0; 
+    font-family: 'Roboto', sans-serif; 
 }
 
 @media (max-width :480px) {
